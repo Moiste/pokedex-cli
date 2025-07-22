@@ -6,7 +6,7 @@ export function cleanInput(input: string): string[] {
   .toLowerCase()
   .trim()
   .split(' ')
-  .filter((text) => text !== " ");
+  .filter((text) => text !== "");
 }
 
 export async function startREPL(state: State) {
@@ -19,12 +19,13 @@ export async function startREPL(state: State) {
     }
     else {
       const commandName = input[0];
+      const args = input.slice(1);
       const commands = getCommands();
       const cmd = commands[commandName];
 
       if (cmd) {
         try {
-          await cmd.callback(state);
+          await cmd.callback(state, ...args);
         } catch (e) {
           console.log((e as Error).message);
         }
