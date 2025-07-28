@@ -36,4 +36,5 @@ npm install
 ```Build and start:
 nvm use
 npm run dev
+help
 ```
