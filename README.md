@@ -21,6 +21,7 @@ A command-line interface (CLI) Pokédex application built with TypeScript. This 
 
 ### Prerequisites
 
+- [nvm](https://github.com/nvm-sh/nvm)
 - [Node.js](https://nodejs.org/) (Use nvm)
 - [npm](https://www.npmjs.com/)
 
